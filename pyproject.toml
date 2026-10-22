@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "dspy-contextfetch"
+version = "0.1.0"
+description = "ContextFetch web search and page reading as DSPy tools"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+authors = [{ name = "ContextFetch" }]
+keywords = ["dspy", "contextfetch", "web search", "tools", "agents"]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["contextfetch>=0.1.0,<1.0.0"]
+
+[project.urls]
+Homepage = "https://contextfetch.dev"
+Source = "https://github.com/lachy3433/dspy-contextfetch"
+
+[dependency-groups]
+test = ["pytest>=8", "dspy>=3.0"]
+
+[tool.hatch.build.targets.sdist]
+only-include = ["dspy_contextfetch", "tests", "README.md", "LICENSE"]
